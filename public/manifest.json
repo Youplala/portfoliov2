@@ -1,0 +1,21 @@
+{
+  "name": "Elie Brosset - Portfolio",
+  "short_name": "EB Portfolio",
+  "description": "Paris-based Data Engineer & AI Developer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfbfb",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/og-image.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
