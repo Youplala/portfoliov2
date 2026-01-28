@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.5, duration: 1 }}
               className="text-lg md:text-2xl text-gray-500 leading-relaxed mb-10"
             >
-              Paris-based developer shipping AI tools that help make sense of messy data. Currently building dripin, an AI wardrobe organizer with fashion recommendations.
+              Data engineer specializing in AI/ML applications. Building data pipelines for Louis Vuitton and developing dripin, an AI wardrobe organizer.
             </motion.p>
             
             <motion.div

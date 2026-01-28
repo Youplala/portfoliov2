@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
         >
           <span className="text-xs font-bold tracking-[0.3em] uppercase text-gray-500 mb-8 block">Got a cool project?</span>
           <a
-            href="mailto:elie@brosset.li"
+            href="mailto:contact@eliebrosset.com"
             className="text-5xl md:text-8xl font-bold tracking-tighter hover:text-gray-400 transition-colors break-words leading-none"
           >
             LET'S CHAT.
