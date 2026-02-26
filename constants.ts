@@ -20,6 +20,16 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '02',
+    title: 'CVPilot',
+    description: 'I built an AI-powered CV tailoring tool that runs 100% in the browser. Paste a job posting, and it generates a perfectly tailored CV with PDF export.',
+    tags: ['React', 'TypeScript', 'Gemini', 'Tailwind', 'pdf-lib'],
+    imageUrl: '/cvpilot_screenshot.png',
+    year: '2025',
+    githubUrl: 'https://github.com/Youplala/cvpilot',
+    demoUrl: 'https://youplala.github.io/cvpilot/'
+  },
+  {
+    id: '03',
     title: 'ChartGPT',
     description: 'I created this app that won the Dash-GPT Challenge by Plotly. It uses LLMs to generate interactive charts from natural language.',
     tags: ['Python', 'Dash', 'Plotly', 'LLMs', 'HuggingFace'],
@@ -29,7 +39,7 @@ export const PROJECTS: Project[] = [
     demoUrl: 'https://chartgpt.brosset.li/'
   },
   {
-    id: '03',
+    id: '04',
     title: 'On mange où ?',
     description: 'I developed a real-time voting app to help friends decide where to eat together.',
     tags: ['Next.js', 'TypeScript', 'Tailwind', 'Socket.io'],
@@ -39,7 +49,7 @@ export const PROJECTS: Project[] = [
     demoUrl: 'https://onmangeou.brosset.li/'
   },
   {
-    id: '04',
+    id: '05',
     title: 'FishWatch',
     description: 'I built ML models to predict illegal fishing activities using publicly available data and classical algorithms.',
     tags: ['Python', 'Random Forest', 'KNN', 'Scikit-learn'],
