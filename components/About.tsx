@@ -40,7 +40,7 @@ const About: React.FC = () => {
           <div className="bg-[#1a1a1a] p-12 text-white rounded-3xl shadow-2xl shadow-black/10">
             <h3 className="text-3xl font-serif italic mb-8">My take on things</h3>
             <p className="text-xl leading-relaxed text-gray-400 mb-12">
-              I care about shipping, not just building. Whether it's production ML pipelines for luxury retail or AI apps I launch on my own — I go from idea to deployed product. I'm most useful when I can own something end-to-end.
+              I like building things that work and putting them in people's hands. ML pipelines processing 50k transactions a day, apps I ship on my own time — same energy. Give me a problem and some autonomy and I'll figure it out.
             </p>
             <div className="flex gap-12">
                <div>
