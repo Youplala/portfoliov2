@@ -40,6 +40,15 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '04',
+    title: 'Kynto',
+    description: 'AI recruitment assistant — automates job posting, candidate sourcing across 600M+ profiles, AI-powered screening, and interview scheduling.',
+    tags: ['TypeScript', 'NestJS', 'LLMs', 'PostgreSQL'],
+    imageUrl: '/kynto_screenshot.png',
+    year: '2026',
+    demoUrl: 'https://kyntoai.com'
+  },
+  {
+    id: '05',
     title: 'On mange où ?',
     description: 'Real-time voting app to help teams decide where to eat. Swipe to vote, live leaderboard, integrated chat.',
     tags: ['Next.js', 'TypeScript', 'Socket.io', 'Tailwind'],
