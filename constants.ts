@@ -5,24 +5,24 @@ export const SOCIAL_LINKS = {
   github: 'https://github.com/youplala',
   linkedin: 'https://linkedin.com/in/eliebrosset',
   x: 'https://x.com/eliebrosset',
-  resume: 'https://storage.rxresu.me/clp9g022gck4a9hun5yo3nwor/resumes/ai-engineer.pdf'
+  resume: '/ai-engineer.pdf'
 };
 
 export const PROJECTS: Project[] = [
   {
     id: '01',
     title: 'dripin',
-    description: 'I built an AI-powered wardrobe organizer with fashion recommendations and virtual try-on capabilities.',
-    tags: ['Vite', 'TypeScript', 'Tailwind', 'HuggingFace', 'Gemini'],
+    description: 'AI wardrobe app — snap an outfit photo, AI extracts every item with descriptions and tags, then recommends daily outfits based on weather and wear history.',
+    tags: ['Go', 'React Native', 'Gemini', 'PostgreSQL', 'MinIO'],
     imageUrl: '/dripin_screenshot.png',
-    year: '2024',
+    year: '2025',
     demoUrl: 'https://dripin.app'
   },
   {
     id: '02',
     title: 'CVPilot',
-    description: 'I built an AI-powered CV tailoring tool that runs 100% in the browser. Paste a job posting, and it generates a perfectly tailored CV with PDF export.',
-    tags: ['React', 'TypeScript', 'Gemini', 'Tailwind', 'pdf-lib'],
+    description: 'Paste a job listing, get a tailored CV in seconds. 100% client-side — your data never leaves the browser. Multi-resume support with comparative scoring.',
+    tags: ['React', 'TypeScript', 'Gemini API', 'pdf-lib'],
     imageUrl: '/cvpilot_screenshot.png',
     year: '2025',
     githubUrl: 'https://github.com/Youplala/cvpilot',
@@ -31,51 +31,51 @@ export const PROJECTS: Project[] = [
   {
     id: '03',
     title: 'ChartGPT',
-    description: 'I created this app that won the Dash-GPT Challenge by Plotly. It uses LLMs to generate interactive charts from natural language.',
+    description: '🏆 1st place — Plotly Dash-GPT Challenge. Natural language to interactive charts, 25k+ downloads. Deployed on HuggingFace Spaces.',
     tags: ['Python', 'Dash', 'Plotly', 'LLMs', 'HuggingFace'],
     imageUrl: '/chartgpt_screenshot.png',
-    year: '2024',
+    year: '2023',
     githubUrl: 'https://github.com/Youplala/chartgpt',
     demoUrl: 'https://chartgpt.brosset.li/'
   },
   {
     id: '04',
+    title: 'Kynto',
+    description: 'AI recruitment assistant — automates job posting, candidate sourcing across 600M+ profiles, AI-powered screening, and interview scheduling.',
+    tags: ['TypeScript', 'NestJS', 'LLMs', 'PostgreSQL'],
+    imageUrl: '/kynto_screenshot.png',
+    year: '2026',
+    demoUrl: 'https://kyntoai.com'
+  },
+  {
+    id: '05',
     title: 'On mange où ?',
-    description: 'I developed a real-time voting app to help friends decide where to eat together.',
-    tags: ['Next.js', 'TypeScript', 'Tailwind', 'Socket.io'],
+    description: 'Real-time voting app to help teams decide where to eat. Swipe to vote, live leaderboard, integrated chat.',
+    tags: ['Next.js', 'TypeScript', 'Socket.io', 'Tailwind'],
     imageUrl: '/onmangeou_screenshot.png',
     year: '2023',
     githubUrl: 'https://github.com/Youplala/onmangeou',
     demoUrl: 'https://onmangeou.brosset.li/'
-  },
-  {
-    id: '05',
-    title: 'FishWatch',
-    description: 'I built ML models to predict illegal fishing activities using publicly available data and classical algorithms.',
-    tags: ['Python', 'Random Forest', 'KNN', 'Scikit-learn'],
-    imageUrl: '/WorldMap.png',
-    year: '2022',
-    githubUrl: 'https://github.com/Youplala/FishWatch'
   }
 ];
 
 export const EXPERIENCES: Experience[] = [
   {
-    company: 'Advanced Schema',
-    role: 'Data Engineer',
+    company: 'Advanced Schema · LVMH',
+    role: 'Software Engineer',
     period: '2023 — Present',
-    description: 'I consult for Louis Vuitton, building high-performance data pipelines and real-time APIs for luxury retail operations.'
+    description: 'Production ML pipeline (YOLO) for retail product recognition. NestJS microservices processing thousands of documents daily on GCP. Data pipelines handling 50k+ real-time transactions/day for Louis Vuitton.'
   },
   {
     company: 'Humanitics.ai',
     role: 'Machine Learning Engineer',
     period: '2022 — 2023',
-    description: 'I built interactive dashboards and a recommendation engine for retail store managers across France.'
+    description: 'Built ChartGPT — an LLM-powered visualization library (25k+ downloads, 1st place Plotly Challenge). Designed end-to-end ML deployment workflows with +25% accuracy improvement.'
   },
   {
-    company: 'Humanitics.ai',
-    role: 'Data Science Intern',
+    company: 'Learning Planet Institute',
+    role: 'Data Science Research Intern',
     period: '2021',
-    description: 'I developed ML models for predictive analysis and clustering on retail sales data for boutiques nationwide.'
+    description: 'NLP-based concept extraction from thesis abstracts. Domain classification using SVM and deep learning techniques.'
   }
 ];

@@ -40,16 +40,20 @@ const About: React.FC = () => {
           <div className="bg-[#1a1a1a] p-12 text-white rounded-3xl shadow-2xl shadow-black/10">
             <h3 className="text-3xl font-serif italic mb-8">My take on things</h3>
             <p className="text-xl leading-relaxed text-gray-400 mb-12">
-              I build tools that help humans make sense of messy data—whether it's compliance-friendly pipelines for luxury fashion or interactive charts that write themselves. I keep a relentless bias toward shipping fast.
+              I care about shipping, not just building. Whether it's production ML pipelines for luxury retail or AI apps I launch on my own — I go from idea to deployed product. I'm most useful when I can own something end-to-end.
             </p>
             <div className="flex gap-12">
                <div>
-                 <div className="text-3xl font-bold mb-1">05+</div>
-                 <div className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Years experience</div>
+                 <div className="text-3xl font-bold mb-1">50k+</div>
+                 <div className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Daily transactions</div>
                </div>
                <div>
-                 <div className="text-3xl font-bold mb-1">20+</div>
-                 <div className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Projects shipped</div>
+                 <div className="text-3xl font-bold mb-1">25k+</div>
+                 <div className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Downloads</div>
+               </div>
+               <div>
+                 <div className="text-3xl font-bold mb-1">🏆</div>
+                 <div className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Plotly Challenge</div>
                </div>
             </div>
           </div>
