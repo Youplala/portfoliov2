@@ -13,21 +13,21 @@ const Contact: React.FC = () => {
           viewport={{ once: true }}
           className="mb-32"
         >
-          <span className="text-xs font-bold tracking-[0.3em] uppercase text-gray-500 mb-8 block">Got a cool project?</span>
+          <span className="text-xs font-bold tracking-[0.3em] uppercase text-gray-500 mb-8 block">Building something ambitious?</span>
           <a
             href="mailto:contact@eliebrosset.com"
             className="text-5xl md:text-8xl font-bold tracking-tighter hover:text-gray-400 transition-colors break-words leading-none"
           >
-            LET'S CHAT.
+            LET'S TALK.
           </a>
           <p className="mt-8 text-xl text-gray-400 max-w-md">
-            I'm open to new opportunities and always happy to chat over virtual coffee. Feel free to reach out.
+            I'm looking for AI Product Engineer, Applied AI Engineer and Forward Deployed Engineer roles with end-to-end product ownership.
           </p>
         </motion.div>
 
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 pt-12 border-t border-white/10">
           <div className="text-[10px] font-bold tracking-widest uppercase opacity-30">
-            &copy; 2024 ELIE BROSSET. BORN TO CODE.
+            &copy; 2026 ELIE BROSSET.
           </div>
           
           <div className="flex flex-wrap gap-8 items-center">

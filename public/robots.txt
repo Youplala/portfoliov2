@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://brosset.li/sitemap.xml
+Sitemap: https://eliebrosset.com/sitemap.xml

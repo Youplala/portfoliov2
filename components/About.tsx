@@ -40,12 +40,12 @@ const About: React.FC = () => {
           <div className="bg-[#1a1a1a] p-12 text-white rounded-3xl shadow-2xl shadow-black/10">
             <h3 className="text-3xl font-serif italic mb-8">My take on things</h3>
             <p className="text-xl leading-relaxed text-gray-400 mb-12">
-              I like building things that work and putting them in people's hands. ML pipelines processing 50k transactions a day, apps I ship on my own time — same energy. Give me a problem and some autonomy and I'll figure it out.
+              I like turning ambiguous problems into products people can actually use. Production ML, backend systems, mobile apps and infrastructure are all part of the same job: getting from idea to something reliable.
             </p>
             <div className="flex gap-12">
                <div>
-                 <div className="text-3xl font-bold mb-1">50k+</div>
-                 <div className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Daily transactions</div>
+                 <div className="text-3xl font-bold mb-1">170M</div>
+                 <div className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Transactions migrated</div>
                </div>
                <div>
                  <div className="text-3xl font-bold mb-1">25k+</div>

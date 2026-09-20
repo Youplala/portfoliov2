@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
           <span className="text-[10px] md:text-xs font-bold tracking-[0.4em] uppercase text-gray-400 mb-8 block">
-            Software Engineer · AI
+            AI Product Engineer
           </span>
           <h1 className="text-7xl md:text-9xl lg:text-[12rem] font-bold tracking-tighter leading-[0.85] mb-12">
             ELIE <br />
@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.5, duration: 1 }}
               className="text-lg md:text-2xl text-gray-500 leading-relaxed mb-10"
             >
-              I build AI products end-to-end — from ML pipelines at Louis Vuitton to shipping my own apps. Python, TypeScript, Go, LLMs.
+              I build AI products end-to-end, from production ML systems at Louis Vuitton to mobile apps on self-hosted infrastructure. Python, TypeScript, Go.
             </motion.p>
             
             <motion.div
