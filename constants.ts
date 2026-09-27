@@ -16,10 +16,28 @@ export const PROJECTS: Project[] = [
     tags: ['Go', 'React Native', 'Gemini', 'PostgreSQL', 'MinIO'],
     imageUrl: '/dripin_screenshot.png',
     year: '2025 - Present',
-    demoUrl: 'https://dripin.app'
+    demoUrl: 'https://dripin.app',
+    appStoreUrl: 'https://apps.apple.com/fr/app/dripin-dressing-styliste-ia/id6788119955'
   },
   {
     id: '02',
+    title: 'Paris GO',
+    description: 'An open-source iOS app for finding viewpoints photographed across Paris in 1970, recreating them today and comparing the city across time.',
+    tags: ['React Native', 'Expo', 'TypeScript', 'Maps', 'Open Data'],
+    imageUrl: '/paris-go_screenshot.png',
+    year: '2026',
+    githubUrl: 'https://github.com/Youplala/reprise'
+  },
+  {
+    id: '03',
+    title: 'HomeARt',
+    description: 'A native iOS app for previewing art at true scale on your own walls, customizing frames and composing gallery walls in augmented reality.',
+    tags: ['SwiftUI', 'RealityKit', 'ARKit', 'LiDAR', 'iOS'],
+    imageUrl: '/homeart_screenshot.png',
+    year: '2026'
+  },
+  {
+    id: '04',
     title: 'Kynto',
     description: 'Built the complete AI layer for a recruitment platform, including candidate matching, scoring, document retrieval and recruitment workflows.',
     tags: ['FastAPI', 'LangChain', 'Vertex AI', 'RAG', 'Cloud Run'],
@@ -28,7 +46,7 @@ export const PROJECTS: Project[] = [
     demoUrl: 'https://kyntoai.com'
   },
   {
-    id: '03',
+    id: '05',
     title: 'ChartGPT',
     description: '1st place in Plotly\'s Dash-GPT Challenge. Turns natural-language questions into interactive charts, with 25k+ downloads.',
     tags: ['Python', 'Dash', 'Plotly', 'LLMs', 'HuggingFace'],
