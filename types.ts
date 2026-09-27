@@ -8,6 +8,7 @@ export interface Project {
   year: string;
   githubUrl?: string;
   demoUrl?: string;
+  appStoreUrl?: string;
 }
 
 export interface Experience {

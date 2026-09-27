@@ -26,8 +26,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         />
         
         {/* Hover Overlay - Show demo or GitHub links if available */}
-        {(project.demoUrl || project.githubUrl) && (
+        {(project.demoUrl || project.githubUrl || project.appStoreUrl) && (
           <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+            {project.appStoreUrl && (
+              <a
+                href={project.appStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-white text-black text-[10px] font-bold tracking-widest uppercase rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 hover:bg-black hover:text-white"
+              >
+                App Store
+              </a>
+            )}
             {project.demoUrl && (
               <a
                 href={project.demoUrl}
@@ -35,7 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-white text-black text-[10px] font-bold tracking-widest uppercase rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 hover:bg-black hover:text-white"
               >
-                View Demo
+                Website
               </a>
             )}
             {project.githubUrl && (
@@ -66,6 +76,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                 {tag}
               </span>
             ))}
+          </div>
+          <div className="flex flex-wrap gap-3 mt-5 md:hidden">
+            {project.appStoreUrl && (
+              <a href={project.appStoreUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-black text-white text-[10px] font-bold tracking-widest uppercase rounded-full">
+                App Store
+              </a>
+            )}
+            {project.demoUrl && (
+              <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 border border-neutral-300 text-[10px] font-bold tracking-widest uppercase rounded-full">
+                Website
+              </a>
+            )}
+            {project.githubUrl && (
+              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 border border-neutral-300 text-[10px] font-bold tracking-widest uppercase rounded-full">
+                GitHub
+              </a>
+            )}
           </div>
         </div>
         <div className="text-[10px] font-bold opacity-10 hidden md:block">{project.year}</div>
