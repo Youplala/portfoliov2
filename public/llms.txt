@@ -1,0 +1,64 @@
+# Elie Brosset
+
+> AI Product Engineer in Paris, France. I build apps, backend systems and applied AI products.
+
+AI Product Engineer with 4+ years of engineering experience. I build production systems and complete AI products with Python, TypeScript and Go, from backend services and ML pipelines to mobile applications.
+
+## Pages
+
+- [Portfolio](https://eliebrosset.com/): Projects, experience and FAQ.
+- [Current CV and PDF](https://rxresu.me/eliebrosset/ai-product-engineer-portfolio): Canonical CV on Reactive Resume.
+- [Readable portfolio CV](https://eliebrosset.com/resume.html): Print-friendly HTML export.
+- [CV in Markdown](https://eliebrosset.com/resume.md): Text export of the same public facts.
+- [Full portfolio text](https://eliebrosset.com/llms-full.txt): Experience, projects, skills, education and FAQ.
+
+## Selected work
+
+- Dripin: A solo-built iOS wardrobe app on the App Store. Built with TypeScript, React Native, Go, PostgreSQL and Gemini, with memory, tool use and analytics. Runs on self-hosted infrastructure with MinIO.
+- Paris GO: An open-source iOS app for finding viewpoints photographed across Paris in 1970, recreating them today and comparing the city across time.
+- HomeARt: A native iOS app for previewing art at true scale on your own walls, customizing frames and composing gallery walls in augmented reality.
+- Kynto: Lead Developer in an unpaid, part-time venture, January to August 2026. Built an AI layer with FastAPI, RAG, Vertex AI, LangChain, tool use, SSE, testing and observability.
+- ChartGPT: 1st place in Plotly's Dash-GPT Challenge. Turns natural-language questions into interactive charts, with 33.8k downloads.
+
+## Experience
+
+### Advanced Schema | Software Engineer
+
+**Paris, France | October 2023 to present**
+
+- Scaled Louis Vuitton's Java, Kafka and PostgreSQL transaction repository from China to global operations, migrating 170M transactions and increasing ingestion volume 10x. Worked directly with the product manager.
+- Developed NestJS services on Google Cloud Run processing thousands of invoice files per day for Auchan.
+- Built a YOLO-based product recognition pipeline for Pierre Fabre, automating training workflows and deploying real-time segmentation models.
+- Automated business workflows with Python and TypeScript, reducing processing time by 90% for systems serving 200k employees.
+
+### Humanitics.ai, acquired by YOOBIC | Machine Learning Engineer
+
+**Paris, France | September 2022 to September 2023**
+
+- Built and deployed ChartGPT, an LLM-powered data visualization library with 33.8k downloads that won Plotly's Dash-GPT Challenge.
+- Designed ML deployment workflows covering evaluation, versioning and production serving.
+
+### Humanitics.ai | Data Science Intern
+
+**Paris, France | February 2022 to July 2022**
+
+- Built a time-series forecasting model for Lacoste retail traffic, improving prediction MAPE by 25% to support staffing decisions.
+- Improved a Dash application's performance and deployed a shared JupyterLab research environment.
+
+### Learning Planet Institute | Data Science Research Intern
+
+**Paris, France | April 2021 to July 2021**
+
+- Built NLP pipelines for concept extraction and research-domain classification using SVM and deep learning.
+
+## Frequently asked questions
+
+Two fair questions.
+
+### Why is Elie the perfect hire?
+
+There is no universal perfect hire. I fit work that connects product, backend engineering and applied AI. The CV has the evidence; the adjective is negotiable.
+
+### Does a personal website need an FAQ?
+
+Probably not. Apparently every website has one now. This one stops at two questions.
