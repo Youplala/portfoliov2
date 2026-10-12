@@ -3,6 +3,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
+  cardDescription: string;
   tags: string[];
   why: string;
   imageUrl: string;

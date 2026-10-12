@@ -3,7 +3,7 @@
 **AI Product Engineer**
 Paris, France
 
-Email: [eliebrosset@gmail.com](mailto:eliebrosset@gmail.com)
+Email: [jobs@eliebrosset.com](mailto:jobs@eliebrosset.com)
 Portfolio: [eliebrosset.com](https://eliebrosset.com/)
 CV: [Current CV and PDF](https://rxresu.me/eliebrosset/ai-product-engineer-portfolio)
 Readable portfolio CV: [HTML version](https://eliebrosset.com/resume.html)

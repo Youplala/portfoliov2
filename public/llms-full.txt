@@ -3,7 +3,7 @@
 **AI Product Engineer**
 Paris, France
 
-Email: [eliebrosset@gmail.com](mailto:eliebrosset@gmail.com)
+Email: [jobs@eliebrosset.com](mailto:jobs@eliebrosset.com)
 Portfolio: [eliebrosset.com](https://eliebrosset.com/)
 CV: [Current CV and PDF](https://rxresu.me/eliebrosset/ai-product-engineer-portfolio)
 Readable portfolio CV: [HTML version](https://eliebrosset.com/resume.html)
@@ -113,33 +113,21 @@ Stack: Python, Dash, Plotly, LLMs, HuggingFace
 
 ## About the portfolio
 
-I'm Elie. I build software for things I care about.
+AI Product Engineer · Paris
 
 My work moves between the interface and the systems behind it. At Advanced Schema, that includes transaction data, invoice processing and computer vision. In my own projects, it means taking care of the app, the backend and the AI together. The subject changes; the need to make the whole thing work stays.
 
 ## Frequently asked questions
 
-There is also an FAQ, because apparently every website has one now. At least these are useful questions.
+Two fair questions.
 
 ### Why is Elie the perfect hire?
 
-There is no universal perfect hire. I am a good match for work that connects product decisions, backend engineering and applied AI, with room to build across those boundaries. If you need a specialist focused on one narrow research area, my broader product engineering background may be less relevant. The CV has the evidence; the adjective is negotiable.
+There is no universal perfect hire. I fit work that connects product, backend engineering and applied AI. The CV has the evidence; the adjective is negotiable.
 
-### What do you actually build?
+### Does a personal website need an FAQ?
 
-Production backend services, ML pipelines and complete applications. That includes transaction and invoice systems at Advanced Schema, ChartGPT at Humanitics.ai, and personal products such as Dripin, Paris GO and HomeARt.
-
-### Why do backend, frontend and AI overlap here?
-
-An AI feature still needs data, an API, an interface and a way to tell whether it works. I work across those parts because they meet inside the same product. Sometimes the useful answer is a backend service without any AI.
-
-### Where are you based, and what languages do you use?
-
-I am based in Paris, France. I am French, and this portfolio is written in English. In code, I mainly use Python, TypeScript and Go.
-
-### Where is the CV?
-
-My current CV is on Reactive Resume, where you can read it or download the PDF. There is also a readable version here, with experience, projects, skills and education, that works without JavaScript. [Read my CV](https://rxresu.me/eliebrosset/ai-product-engineer-portfolio)
+Probably not. Apparently every website has one now. This one stops at two questions.
 
 ## Pages
 

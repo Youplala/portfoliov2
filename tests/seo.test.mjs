@@ -28,13 +28,13 @@ for (const [label, doc, html, url] of [['portfolio', root, rootHTML, origin + '/
     for (const prefix of ['og', 'twitter']) {
       assert.equal(attr(meta(doc, `${prefix}:title`), 'content'), text(nodes(doc, 'title')[0]));
       assert.equal(attr(meta(doc, `${prefix}:description`), 'content'), attr(meta(doc, 'description'), 'content'));
-      assert.equal(attr(meta(doc, `${prefix}:image`), 'content'), origin + '/og-personal-v1.png');
+      assert.equal(attr(meta(doc, `${prefix}:image`), 'content'), origin + '/og-personal-v2.png');
       assert.match(attr(meta(doc, `${prefix}:image:alt`), 'content'), /Elie Brosset/);
     }
     assert.equal(attr(meta(doc, 'twitter:card'), 'content'), 'summary_large_image');
     assert.equal(nodes(doc, 'h1').length, 1);
     const main = nodes(doc, 'main')[0];
-    for (const fact of ['170M', '33.8k', 'Data Science Intern', 'unpaid', 'January to August 2026', 'Pierre Fabre']) assert.ok(text(main).includes(fact), fact);
+    if (label === 'CV') for (const fact of ['170M', '33.8k', 'Data Science Intern', 'unpaid', 'January to August 2026', 'Pierre Fabre', 'MAPE by 25%']) assert.ok(text(main).includes(fact), fact);
     assert.doesNotMatch(html, /—|25k\+|FAQPage|importmap|cdn\.tailwindcss|GEMINI_API_KEY/);
     assert.doesNotMatch(html, /style="[^"]*(?:opacity:\s*0(?:;|"|$)|visibility:\s*hidden|display:\s*none)/);
     assert.ok(nodes(doc, 'a').every(a => !/\.docx(?:$|[?#])/i.test(attr(a, 'href') ?? '')));
@@ -59,16 +59,63 @@ test('root and CV have distinct metadata; navigation and FAQ work without JS', (
   assert.notEqual(text(nodes(root, 'title')[0]), text(nodes(cv, 'title')[0]));
   assert.notEqual(attr(meta(root, 'description'), 'content'), attr(meta(cv, 'description'), 'content'));
   const details = nodes(root, 'details');
-  assert.equal(details.length, 5);
+  assert.equal(details.length, 2);
   assert.equal(text(nodes(details[0], 'summary')[0]), 'Why is Elie the perfect hire?');
   assert.match(text(details[0]), /no universal perfect hire/);
-  assert.match(text(details[0]), /specialist/);
-  for (const item of details) assert.ok(text(nodes(item, 'p')[0]).length > 100);
-  assert.ok(nodes(root, 'a').filter(n => attr(n, 'href') === canonicalCV).length >= 4);
+  assert.match(text(details[1]), /every website/);
+  for (const item of details) assert.ok(text(nodes(item, 'p')[0]).trim().split(/\s+/).length <= 50);
+  assert.equal(nodes(root, 'a').filter(n => attr(n, 'href') === canonicalCV).length, 1);
   const ids = [...nodes(root, 'section'), ...nodes(root, 'main'), ...nodes(root, 'footer'), ...nodes(root, 'div')].map(n => attr(n, 'id'));
   for (const a of nodes(root, 'a')) if (attr(a, 'href')?.startsWith('#')) assert.ok(ids.includes(attr(a, 'href').slice(1)));
   assert.ok(nodes(cv, 'a').some(n => attr(n, 'href') === '/'));
-  assert.ok(nodes(cv, 'a').some(n => attr(n, 'href') === 'mailto:eliebrosset@gmail.com'));
+  assert.ok(nodes(cv, 'a').some(n => attr(n, 'href') === 'mailto:jobs@eliebrosset.com'));
+});
+
+test('homepage is a compact introduction with five complete, crawlable project cards', () => {
+  const visibleText = node => ['script', 'style'].includes(node.tagName) ? '' :
+    (node.nodeName === '#text' ? node.value : '') + (node.childNodes ?? []).map(visibleText).join(' ');
+  const words = visibleText(nodes(root, 'body')[0]).trim().split(/\s+/).length;
+  assert.ok(words <= 350, `Homepage has ${words} words, including collapsed answers`);
+  assert.equal(text(nodes(root, 'h1')[0]), 'Elie Brosset');
+  assert.ok(text(nodes(root, 'main')[0]).includes('AI Product Engineer · Paris'));
+  assert.equal(nodes(root, 'canvas').length, 0);
+  assert.doesNotMatch(rootHTML, /min-h-screen|fixed top-0|SOCIAL DOCK|group-hover|font-serif/);
+  const cards = nodes(root, 'article').filter(n => attr(n, 'id')?.startsWith('project-'));
+  assert.deepEqual(cards.map(n => text(nodes(n, 'h3')[0])), ['Dripin', 'Paris GO', 'HomeARt', 'Kynto', 'ChartGPT']);
+  const expectedLinks = [
+    ['https://apps.apple.com/fr/app/dripin-dressing-styliste-ia/id6788119955', 'https://dripin.app'],
+    ['https://github.com/Youplala/reprise'], [], ['https://kyntoai.com'],
+    ['https://chartgpt.brosset.li/', 'https://github.com/Youplala/chartgpt']
+  ];
+  cards.forEach((card, i) => {
+    const descriptionWords = text(nodes(card, 'p')[0]).trim().split(/\s+/).length;
+    assert.ok(descriptionWords >= 12 && descriptionWords <= 25);
+    assert.equal(nodes(card, 'img').length, 1);
+    assert.deepEqual(nodes(card, 'a').map(a => attr(a, 'href')), expectedLinks[i]);
+  });
+  assert.match(text(nodes(root, 'main')[0]), /Advanced Schema.*2023.*Humanitics.ai.*2022/s);
+});
+
+test('homepage uses a small local GitHub avatar, separate from project screenshots', async () => {
+  const avatar = nodes(root, 'img').find(img => attr(img, 'src') === '/avatar-github.png');
+  assert.ok(avatar, 'GitHub avatar must be in the initial HTML');
+  assert.equal(attr(avatar, 'alt'), 'Elie Brosset GitHub avatar');
+  assert.equal(attr(avatar, 'width'), '56');
+  assert.equal(attr(avatar, 'height'), '56');
+  const png = await readFile('dist/avatar-github.png');
+  assert.equal(png.subarray(1, 4).toString(), 'PNG');
+  assert.ok(png.readUInt32BE(16) > 0);
+  assert.doesNotMatch(rootHTML, /fonts\.googleapis|fonts\.gstatic/);
+});
+
+test('homepage metadata and social card match its short introduction', async () => {
+  assert.equal(text(nodes(root, 'title')[0]), 'Elie Brosset | AI Product Engineer · Paris');
+  assert.equal(attr(meta(root, 'description'), 'content'), 'Elie Brosset, AI Product Engineer in Paris. I build apps, backend systems and applied AI products. Selected projects, experience and contact.');
+  assert.equal(attr(meta(root, 'og:image:alt'), 'content'), 'Elie Brosset. AI Product Engineer · Paris. Apps, backend systems and applied AI products.');
+  const socialSVG = await read('og-personal-v2.svg');
+  assert.match(socialSVG, /AI Product Engineer · Paris/);
+  assert.match(socialSVG, /Apps, backend systems/);
+  assert.doesNotMatch(socialSVG, /things I care about|I'm Elie|Clothes\./);
 });
 
 test('text exports agree with public content and contain only current CV links', async () => {
@@ -78,6 +125,9 @@ test('text exports agree with public content and contain only current CV links',
     assert.match(content, /170M transactions/);
     assert.match(content, /Data Science Intern/);
     assert.match(content, /unpaid, part-time/);
+    assert.match(content, /January to August 2026/);
+    assert.match(content, /MAPE by 25%/);
+    if (file !== 'llms.txt') for (const detail of ['MinIO', 'SwiftUI', 'ARKit', 'Vertex AI', 'Stack:']) assert.ok(content.includes(detail), `${file}: ${detail}`);
     assert.ok(content.includes(origin + '/resume.html'));
     assert.ok(content.includes(canonicalCV));
     assert.doesNotMatch(content, /25k\+|—|\.docx|localhost|vercel\.app|25% model accuracy/);
@@ -104,6 +154,17 @@ test('sitemap and robots use only production pages, without invented lastmod dat
   assert.doesNotMatch(robots, /Disallow:/);
 });
 
+test('ChartGPT preview preserves the full screenshot instead of cropping its title and chart', async () => {
+  const img = nodes(root, 'img').find(n => attr(n, 'alt') === 'ChartGPT application screenshot');
+  assert.equal(attr(img, 'class'), 'project-preview-contain');
+  const styles = nodes(root, 'link').find(n => attr(n, 'rel') === 'stylesheet');
+  const css = await read(attr(styles, 'href').slice(1));
+  const sheet = (await import('postcss')).default.parse(css);
+  let fit;
+  sheet.walkRules('.project-card img.project-preview-contain', rule => rule.walkDecls('object-fit', declaration => { fit = declaration.value; }));
+  assert.equal(fit, 'contain');
+});
+
 test('local styles, print CV, project images and social card exist in the build', async () => {
   for (const doc of [root, cv]) {
     const styles = nodes(doc, 'link').filter(n => attr(n, 'rel') === 'stylesheet').map(n => attr(n, 'href')).filter(href => href.startsWith('/'));
@@ -115,12 +176,13 @@ test('local styles, print CV, project images and social card exist in the build'
     assert.match(css, /\.resume-nav/);
     assert.match(css, /prefers-reduced-motion/);
   }
-  assert.equal(nodes(root, 'img').length, 5);
-  for (const img of nodes(root, 'img')) {
+  const screenshots = nodes(root, 'img').filter(img => /application screenshot/.test(attr(img, 'alt')));
+  assert.equal(screenshots.length, 5);
+  for (const img of screenshots) {
     assert.match(attr(img, 'alt'), /application screenshot/);
     await access(`dist${attr(img, 'src')}`);
   }
-  const png = await readFile('dist/og-personal-v1.png');
+  const png = await readFile('dist/og-personal-v2.png');
   assert.equal(png.readUInt32BE(16), 1200);
   assert.equal(png.readUInt32BE(20), 630);
   await access('dist/favicon.svg');

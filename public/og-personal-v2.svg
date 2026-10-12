@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fbfbfb"/>
+  <path d="M80 100H152" stroke="#176452" stroke-width="6"/>
+  <g font-family="DejaVu Sans, sans-serif">
+    <text x="76" y="250" fill="#1a1a1a" font-size="66" font-weight="bold" letter-spacing="-2">Elie Brosset</text>
+    <text x="80" y="320" fill="#176452" font-size="34">AI Product Engineer · Paris</text>
+    <text x="80" y="405" fill="#525252" font-size="28">Apps, backend systems</text>
+    <text x="80" y="448" fill="#525252" font-size="28">and applied AI products.</text>
+    <path d="M80 516H1120" stroke="#e5e5e5"/>
+    <text x="80" y="566" fill="#525252" font-size="22">eliebrosset.com</text>
+  </g>
+</svg>

@@ -8,10 +8,10 @@ export const ORIGIN = 'https://eliebrosset.com';
 const absolute = (path: string) => new URL(path, ORIGIN).href;
 export function renderPage(cv = false) {
   const url = absolute(cv ? RESUME_PATH : '/');
-  const title = cv ? 'Elie Brosset | CV | AI Product Engineer' : 'Elie Brosset | AI Product Engineer in Paris';
-  const description = cv ? 'Read the CV of Elie Brosset, Paris-based AI Product Engineer: 4+ years of engineering, production systems, ML pipelines and personal products.' : "I'm Elie, an AI Product Engineer in Paris. I build software for things I care about: clothes, a changing city, art on walls, and useful tools and systems.";
-  const image = absolute('/og-personal-v1.png');
-  const imageAlt = "Elie Brosset, AI Product Engineer in Paris. I build software for things I care about.";
+  const title = cv ? 'Elie Brosset | CV | AI Product Engineer' : `${PROFILE.name} | ${PROFILE.headline}`;
+  const description = cv ? 'Read the CV of Elie Brosset, Paris-based AI Product Engineer: 4+ years of engineering, production systems, ML pipelines and personal products.' : `${PROFILE.name}, AI Product Engineer in Paris. ${PROFILE.subtitle} Selected projects, experience and contact.`;
+  const image = absolute('/og-personal-v2.png');
+  const imageAlt = 'Elie Brosset. AI Product Engineer · Paris. Apps, backend systems and applied AI products.';
   const personId = absolute('/#person');
   const graph = { '@context': 'https://schema.org', '@graph': [
     { '@type': 'Person', '@id': personId, name: PROFILE.name, jobTitle: PROFILE.role, url: absolute('/'), sameAs: [SOCIAL_LINKS.github, SOCIAL_LINKS.linkedin, SOCIAL_LINKS.x], homeLocation: { '@type': 'Place', name: PROFILE.location }, subjectOf: { '@id': absolute(RESUME_PATH) + '#profile' } },
@@ -32,11 +32,11 @@ export function textExports() {
   const experience = EXPERIENCES.map(e => `### ${e.company} | ${e.role}\n\n**Paris, France | ${e.period}**\n\n${e.bullets.map(b => `- ${b}`).join('\n')}`).join('\n\n');
   const projects = PROJECTS.map(p => `### ${p.title}\n\n${p.description}\n\n${p.why}\n\nStack: ${p.tags.join(', ')}\n\n${[['Website', p.demoUrl], ['Source code', p.githubUrl], ['App Store', p.appStoreUrl]].filter(([,url]) => url).map(([name,url]) => `- [${name}](${url})`).join('\n')}`).join('\n\n');
   const resume = `# ${PROFILE.name}\n\n**${PROFILE.role}**\n${PROFILE.location}\n\nEmail: [${PROFILE.email}](mailto:${PROFILE.email})\nPortfolio: [eliebrosset.com](${absolute('/')})\nCV: [Current CV and PDF](${SOCIAL_LINKS.resume})\nReadable portfolio CV: [HTML version](${absolute(RESUME_PATH)})\nGitHub: [Youplala](${SOCIAL_LINKS.github})\nLinkedIn: [Elie Brosset](${SOCIAL_LINKS.linkedin})\n\n## Profile\n\n${PROFILE.summary}\n\n## Experience\n\n${experience}\n\n## Selected Products\n\n${projects}\n\n## Skills\n\n${Object.entries(SKILLS).map(([k,v]) => `- **${k}:** ${v.join(', ')}`).join('\n')}\n\n## Education\n\n${EDUCATION.map(e => `- ${e}`).join('\n')}\n`;
-  const faq = `## Frequently asked questions\n\n${FAQ_NOTE}\n\n${FAQ.map(f => `### ${f.question}\n\n${f.answer}${f.link ? ` [${f.link.label}](${absolute(f.link.href)})` : ''}`).join('\n\n')}\n`;
+  const faq = `## Frequently asked questions\n\n${FAQ_NOTE}\n\n${FAQ.map(f => `### ${f.question}\n\n${f.answer}`).join('\n\n')}\n`;
   const links = `## Pages\n\n- [Portfolio](${absolute('/')}): Projects, experience and FAQ.\n- [Current CV and PDF](${SOCIAL_LINKS.resume}): Canonical CV on Reactive Resume.\n- [Readable portfolio CV](${absolute(RESUME_PATH)}): Print-friendly HTML export.\n- [CV in Markdown](${absolute('/resume.md')}): Text export of the same public facts.\n- [Full portfolio text](${absolute('/llms-full.txt')}): Experience, projects, skills, education and FAQ.\n`;
   return {
     'resume.md': resume,
-    'llms.txt': `# ${PROFILE.name}\n\n> ${PROFILE.role} in ${PROFILE.location}. ${PROFILE.headline}\n\n${PROFILE.summary}\n\n${links}\n## Selected work\n\n${PROJECTS.map(p => `- ${p.title}: ${p.description}`).join('\n')}\n\n## Experience\n\n${experience}\n\n${faq}`,
+    'llms.txt': `# ${PROFILE.name}\n\n> ${PROFILE.role} in ${PROFILE.location}. ${PROFILE.subtitle}\n\n${PROFILE.summary}\n\n${links}\n## Selected work\n\n${PROJECTS.map(p => `- ${p.title}: ${p.description}`).join('\n')}\n\n## Experience\n\n${experience}\n\n${faq}`,
     'llms-full.txt': `${resume}\n## About the portfolio\n\n${PROFILE.headline}\n\n${PROFILE.about}\n\n${faq}\n${links}`,
     'sitemap.xml': `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${absolute('/')}</loc></url>\n  <url><loc>${absolute(RESUME_PATH)}</loc></url>\n</urlset>\n`,
     'robots.txt': `User-agent: *\nAllow: /\n\nSitemap: ${absolute('/sitemap.xml')}\n`
