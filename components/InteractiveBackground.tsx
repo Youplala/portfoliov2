@@ -13,7 +13,10 @@ const InteractiveBackground: React.FC = () => {
     // Scene setup
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    let renderer: THREE.WebGLRenderer;
+    try { renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true }); }
+    catch { return; }
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -80,10 +83,11 @@ const InteractiveBackground: React.FC = () => {
 
     // Animation variables
     let time = 0;
+    let frame = 0;
 
     // Animation Loop
     const animate = () => {
-      requestAnimationFrame(animate);
+      if (!reducedMotion) frame = requestAnimationFrame(animate);
       time += 0.01;
 
       // Rotation based on scroll (dynamic & responsive)
@@ -118,6 +122,8 @@ const InteractiveBackground: React.FC = () => {
     animate();
 
     return () => {
+      cancelAnimationFrame(frame);
+      renderer.dispose();
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('scroll', handleScroll);
@@ -134,8 +140,7 @@ const InteractiveBackground: React.FC = () => {
   return (
     <div className="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
       <div ref={mountRef} className="w-full h-full" />
-      {/* Subtle overlay to soften the 3D depth */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+
     </div>
   );
 };

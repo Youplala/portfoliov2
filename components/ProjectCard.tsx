@@ -11,23 +11,26 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
   return (
     <motion.div 
-      initial={{ opacity: 0, y: 50 }}
+      initial={false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+      id={`project-${project.id}`}
       className="group"
     >
       {/* Image Container - Removed Parallax absolute positioning and overflow logic */}
       <div className="relative aspect-[16/10] overflow-hidden bg-gray-100 mb-8 rounded-2xl shadow-sm group-hover:shadow-xl transition-shadow duration-500">
         <img 
           src={project.imageUrl} 
-          alt={project.title}
+          alt={`${project.title} application screenshot`}
+          loading={index === 0 ? "eager" : "lazy"}
+          decoding="async"
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         
         {/* Hover Overlay - Show demo or GitHub links if available */}
         {(project.demoUrl || project.githubUrl || project.appStoreUrl) && (
-          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity flex items-center justify-center gap-3">
             {project.appStoreUrl && (
               <a
                 href={project.appStoreUrl}
@@ -69,6 +72,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             <span className="text-[10px] font-bold opacity-20">{project.id}</span>
             <h3 className="text-2xl md:text-3xl font-bold tracking-tight">{project.title}</h3>
           </div>
+          <p className="font-serif italic text-xl mb-4">{project.why}</p>
           <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-6">{project.description}</p>
           <div className="flex flex-wrap gap-2">
             {project.tags.map(tag => (
@@ -77,7 +81,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
               </span>
             ))}
           </div>
-          <div className="flex flex-wrap gap-3 mt-5 md:hidden">
+          <div className="flex flex-wrap gap-3 mt-5">
             {project.appStoreUrl && (
               <a href={project.appStoreUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-black text-white text-[10px] font-bold tracking-widest uppercase rounded-full">
                 App Store

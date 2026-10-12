@@ -1,0 +1,150 @@
+# Elie Brosset
+
+**AI Product Engineer**
+Paris, France
+
+Email: [eliebrosset@gmail.com](mailto:eliebrosset@gmail.com)
+Portfolio: [eliebrosset.com](https://eliebrosset.com/)
+CV: [Current CV and PDF](https://rxresu.me/eliebrosset/ai-product-engineer-portfolio)
+Readable portfolio CV: [HTML version](https://eliebrosset.com/resume.html)
+GitHub: [Youplala](https://github.com/youplala)
+LinkedIn: [Elie Brosset](https://linkedin.com/in/eliebrosset)
+
+## Profile
+
+AI Product Engineer with 4+ years of engineering experience. I build production systems and complete AI products with Python, TypeScript and Go, from backend services and ML pipelines to mobile applications.
+
+## Experience
+
+### Advanced Schema | Software Engineer
+
+**Paris, France | October 2023 to present**
+
+- Scaled Louis Vuitton's Java, Kafka and PostgreSQL transaction repository from China to global operations, migrating 170M transactions and increasing ingestion volume 10x. Worked directly with the product manager.
+- Developed NestJS services on Google Cloud Run processing thousands of invoice files per day for Auchan.
+- Built a YOLO-based product recognition pipeline for Pierre Fabre, automating training workflows and deploying real-time segmentation models.
+- Automated business workflows with Python and TypeScript, reducing processing time by 90% for systems serving 200k employees.
+
+### Humanitics.ai, acquired by YOOBIC | Machine Learning Engineer
+
+**Paris, France | September 2022 to September 2023**
+
+- Built and deployed ChartGPT, an LLM-powered data visualization library with 33.8k downloads that won Plotly's Dash-GPT Challenge.
+- Designed ML deployment workflows covering evaluation, versioning and production serving.
+
+### Humanitics.ai | Data Science Intern
+
+**Paris, France | February 2022 to July 2022**
+
+- Built a time-series forecasting model for Lacoste retail traffic, improving prediction MAPE by 25% to support staffing decisions.
+- Improved a Dash application's performance and deployed a shared JupyterLab research environment.
+
+### Learning Planet Institute | Data Science Research Intern
+
+**Paris, France | April 2021 to July 2021**
+
+- Built NLP pipelines for concept extraction and research-domain classification using SVM and deep learning.
+
+## Selected Products
+
+### Dripin
+
+A solo-built iOS wardrobe app on the App Store. Built with TypeScript, React Native, Go, PostgreSQL and Gemini, with memory, tool use and analytics. Runs on self-hosted infrastructure with MinIO.
+
+To make clothes easier to organise and work with.
+
+Stack: TypeScript, React Native, Go, PostgreSQL, Gemini
+
+- [Website](https://dripin.app)
+- [App Store](https://apps.apple.com/fr/app/dripin-dressing-styliste-ia/id6788119955)
+
+### Paris GO
+
+An open-source iOS app for finding viewpoints photographed across Paris in 1970, recreating them today and comparing the city across time.
+
+To put a changing Paris side by side with its past.
+
+Stack: React Native, Expo, TypeScript, Maps, Open Data
+
+- [Source code](https://github.com/Youplala/reprise)
+
+### HomeARt
+
+A native iOS app for previewing art at true scale on your own walls, customizing frames and composing gallery walls in augmented reality.
+
+To preview art on your wall before hanging it.
+
+Stack: SwiftUI, RealityKit, ARKit, LiDAR, iOS
+
+
+
+### Kynto
+
+Lead Developer in an unpaid, part-time venture, January to August 2026. Built an AI layer with FastAPI, RAG, Vertex AI, LangChain, tool use, SSE, testing and observability.
+
+To connect candidate and job information inside recruitment workflows.
+
+Stack: FastAPI, LangChain, Vertex AI, RAG, Cloud Run
+
+- [Website](https://kyntoai.com)
+
+### ChartGPT
+
+1st place in Plotly's Dash-GPT Challenge. Turns natural-language questions into interactive charts, with 33.8k downloads.
+
+To turn a question about data into an interactive chart.
+
+Stack: Python, Dash, Plotly, LLMs, HuggingFace
+
+- [Website](https://chartgpt.brosset.li/)
+- [Source code](https://github.com/Youplala/chartgpt)
+
+## Skills
+
+- **Languages:** Python, TypeScript, Go, Java, SQL
+- **AI and ML:** LLM applications, Gemini, OpenAI, Claude, LangChain, RAG, YOLO, computer vision, NLP
+- **Backend and platform:** NestJS, FastAPI, PostgreSQL, Kafka, REST APIs, Docker, GCP, Cloud Run, GitHub Actions
+- **Product:** React, React Native, Expo, self-hosted infrastructure
+
+## Education
+
+- MSc Computer Science, Artificial Intelligence | CY Tech | 2022 to 2023
+- BSc Data Science and Modeling | CY Cergy Paris University | 2018 to 2022
+
+## About the portfolio
+
+I'm Elie. I build software for things I care about.
+
+My work moves between the interface and the systems behind it. At Advanced Schema, that includes transaction data, invoice processing and computer vision. In my own projects, it means taking care of the app, the backend and the AI together. The subject changes; the need to make the whole thing work stays.
+
+## Frequently asked questions
+
+There is also an FAQ, because apparently every website has one now. At least these are useful questions.
+
+### Why is Elie the perfect hire?
+
+There is no universal perfect hire. I am a good match for work that connects product decisions, backend engineering and applied AI, with room to build across those boundaries. If you need a specialist focused on one narrow research area, my broader product engineering background may be less relevant. The CV has the evidence; the adjective is negotiable.
+
+### What do you actually build?
+
+Production backend services, ML pipelines and complete applications. That includes transaction and invoice systems at Advanced Schema, ChartGPT at Humanitics.ai, and personal products such as Dripin, Paris GO and HomeARt.
+
+### Why do backend, frontend and AI overlap here?
+
+An AI feature still needs data, an API, an interface and a way to tell whether it works. I work across those parts because they meet inside the same product. Sometimes the useful answer is a backend service without any AI.
+
+### Where are you based, and what languages do you use?
+
+I am based in Paris, France. I am French, and this portfolio is written in English. In code, I mainly use Python, TypeScript and Go.
+
+### Where is the CV?
+
+My current CV is on Reactive Resume, where you can read it or download the PDF. There is also a readable version here, with experience, projects, skills and education, that works without JavaScript. [Read my CV](https://rxresu.me/eliebrosset/ai-product-engineer-portfolio)
+
+## Pages
+
+- [Portfolio](https://eliebrosset.com/): Projects, experience and FAQ.
+- [Current CV and PDF](https://rxresu.me/eliebrosset/ai-product-engineer-portfolio): Canonical CV on Reactive Resume.
+- [Readable portfolio CV](https://eliebrosset.com/resume.html): Print-friendly HTML export.
+- [CV in Markdown](https://eliebrosset.com/resume.md): Text export of the same public facts.
+- [Full portfolio text](https://eliebrosset.com/llms-full.txt): Experience, projects, skills, education and FAQ.

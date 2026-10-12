@@ -1,17 +1,20 @@
 
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Work from './components/Work';
 import About from './components/About';
 import Contact from './components/Contact';
+import FrequentlyAsked from './components/FAQ';
 import SocialDock from './components/SocialDock';
 
 // Lazy load the heavy 3D background component
 const InteractiveBackground = lazy(() => import('./components/InteractiveBackground'));
 
 const App: React.FC = () => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -26,16 +29,18 @@ const App: React.FC = () => {
         style={{ scaleX }}
       />
 
-      <Suspense fallback={null}>
+      {mounted && <Suspense fallback={null}>
         <InteractiveBackground />
-      </Suspense>
+      </Suspense>}
+      <a className="skip-link" href="#main">Skip to content</a>
       <Navbar />
       <SocialDock />
 
-      <main className="relative z-10">
+      <main id="main" className="relative z-10">
         <Hero />
         <Work />
         <About />
+        <FrequentlyAsked />
         <Contact />
       </main>
     </div>

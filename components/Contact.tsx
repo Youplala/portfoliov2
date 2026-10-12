@@ -1,36 +1,38 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SOCIAL_LINKS } from '../constants';
+import { SOCIAL_LINKS, PROFILE } from '../constants';
 
 const Contact: React.FC = () => {
   return (
     <footer id="contact" className="pt-32 pb-40 md:pb-32 px-6 md:px-12 bg-[#1a1a1a] text-white">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-32"
+          className="mb-20"
         >
-          <span className="text-xs font-bold tracking-[0.3em] uppercase text-gray-500 mb-8 block">Building something ambitious?</span>
+          <span className="text-xs font-bold tracking-[0.3em] uppercase text-gray-400 mb-8 block">Have something in mind?</span>
           <a
-            href="mailto:contact@eliebrosset.com"
+            href={`mailto:${PROFILE.email}`}
             className="text-5xl md:text-8xl font-bold tracking-tighter hover:text-gray-400 transition-colors break-words leading-none"
           >
             LET'S TALK.
           </a>
           <p className="mt-8 text-xl text-gray-400 max-w-md">
-            I'm looking for AI Product Engineer, Applied AI Engineer and Forward Deployed Engineer roles with end-to-end product ownership.
+            Tell me what you are building, what is getting in the way, or which project brought you here.
           </p>
+          <a href={`mailto:${PROFILE.email}`} className="text-link inline-block mt-6 text-lg">{PROFILE.email}</a>
         </motion.div>
 
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 pt-12 border-t border-white/10">
-          <div className="text-[10px] font-bold tracking-widest uppercase opacity-30">
+          <div className="text-xs font-bold tracking-widest uppercase text-gray-400">
             &copy; 2026 ELIE BROSSET.
           </div>
           
           <div className="flex flex-wrap gap-8 items-center">
+            <a href={SOCIAL_LINKS.resume} className="text-link">Read my CV ↗</a>
             <a 
               href={SOCIAL_LINKS.x} 
               target="_blank" 

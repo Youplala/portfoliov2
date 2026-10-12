@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+  body { font-family: 'Inter', sans-serif; background: #fbfbfb; color: #1a1a1a; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #1a1a1a; color: white; }
+  :focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+  a { text-underline-offset: .25em; }
+  canvas { display: block; }
+}
+.font-serif { font-family: 'Playfair Display', Georgia, serif; }
+.eyebrow { font-size: .7rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: #595959; }
+.hero-title { font-size: clamp(3rem, 7.4vw, 7.8rem); line-height: 1.04; max-width: 1200px; }
+.text-link { text-decoration: underline; text-decoration-thickness: 1px; }
+.site-nav { position: fixed; inset: 0 0 auto; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.25rem 3rem; background: rgb(251 251 251 / .94); border-bottom: 1px solid #e5e5e5; }
+.site-nav a:hover { text-decoration: underline; }
+.skip-link { position: fixed; top: -5rem; left: 1rem; z-index: 110; padding: 1rem; background: white; }
+.skip-link:focus { top: 1rem; }
+.faq-item summary { padding-right: 1rem; display: grid; grid-template-columns: 1.1rem 1fr; gap: .5rem; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::before { content: '▸'; }
+.faq-item[open] summary::before { content: '▾'; }
+.resume-page { max-width: 900px; margin: auto; padding: 2rem 2rem 5rem; line-height: 1.65; }
+.resume-page a { text-decoration: underline; overflow-wrap: anywhere; }
+.resume-nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding: 1rem 0; font-size: .9rem; }
+.resume-header { border-bottom: 1px solid #aaa; padding: 3rem 0 2rem; }
+.resume-header h1 { font-size: clamp(2.7rem, 8vw, 4.5rem); font-weight: 700; letter-spacing: -.05em; line-height: 1.2; margin: .5rem 0 1rem; }
+.resume-intro { margin: 2rem 0 1rem; font-size: 1.1rem; }
+.print-hint, .resume-meta { font-size: .9rem; color: #555; }
+.resume-page section { margin-top: 2rem; }
+.resume-page h2 { font-size: 1.6rem; font-weight: 700; border-bottom: 1px solid #ccc; padding-bottom: .4rem; margin-bottom: 1rem; }
+.resume-page h3 { font-size: 1.1rem; font-weight: 600; }
+.resume-page article { margin: 1.5rem 0; }
+.resume-page ul { padding-left: 1.25rem; list-style: disc; margin-top: .7rem; }
+.resume-page li { margin: .4rem 0; }
+.resume-page section p { margin: .5rem 0; }
+@media (max-width: 600px) { .site-nav { padding: 1rem 1.25rem; } .resume-page { padding: 1rem 1.25rem 3rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+@media print {
+  @page { margin: 15mm; }
+  body { background: white; color: black; }
+  .resume-page { max-width: none; padding: 0; font-size: 10pt; line-height: 1.4; }
+  .resume-header { padding: 0 0 1rem; }
+  .resume-header h1 { font-size: 28pt; }
+  .resume-nav, .print-hint { display: none; }
+  .resume-page h2 { font-size: 15pt; break-after: avoid; }
+  .resume-page h3 { font-size: 11pt; break-after: avoid; }
+  .resume-page article { break-inside: avoid; }
+  .resume-page a { color: black; }
+  .resume-intro { margin: 1rem 0; font-size: 10pt; }
+}

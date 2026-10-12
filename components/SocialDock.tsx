@@ -37,7 +37,7 @@ const SocialDock: React.FC = () => {
   return (
     <div className="fixed bottom-6 left-0 right-0 z-[60] flex justify-center md:bottom-10">
       <motion.div
-        initial={{ y: 100, opacity: 0 }}
+        initial={false}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="inline-flex items-center gap-1 p-1.5 bg-white/80 backdrop-blur-xl border border-black/5 rounded-full shadow-2xl"
@@ -65,7 +65,7 @@ const SocialDock: React.FC = () => {
           rel="noopener noreferrer"
           className="px-4 md:px-6 py-2.5 bg-black text-white text-[9px] md:text-[10px] font-bold tracking-widest uppercase rounded-full hover:bg-neutral-800 transition-colors whitespace-nowrap"
         >
-          Resume
+          Read CV
         </a>
       </motion.div>
     </div>

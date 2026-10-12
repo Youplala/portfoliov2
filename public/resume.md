@@ -1,15 +1,18 @@
 # Elie Brosset
 
-**AI Product Engineer**  
-Paris, France  
-Email: [eliebrosset@gmail.com](mailto:eliebrosset@gmail.com)  
-Portfolio: [eliebrosset.com](https://eliebrosset.com)  
-GitHub: [github.com/Youplala](https://github.com/Youplala)  
-LinkedIn: [linkedin.com/in/eliebrosset](https://linkedin.com/in/eliebrosset)
+**AI Product Engineer**
+Paris, France
+
+Email: [eliebrosset@gmail.com](mailto:eliebrosset@gmail.com)
+Portfolio: [eliebrosset.com](https://eliebrosset.com/)
+CV: [Current CV and PDF](https://rxresu.me/eliebrosset/ai-product-engineer-portfolio)
+Readable portfolio CV: [HTML version](https://eliebrosset.com/resume.html)
+GitHub: [Youplala](https://github.com/youplala)
+LinkedIn: [Elie Brosset](https://linkedin.com/in/eliebrosset)
 
 ## Profile
 
-AI Product Engineer with 4+ years of experience building production systems and complete AI products. Shipped ML pipelines, backend services and mobile applications using Python, TypeScript and Go. Experience includes a global transaction repository handling hundreds of millions of records and an open-source LLM product with 25k+ downloads.
+AI Product Engineer with 4+ years of engineering experience. I build production systems and complete AI products with Python, TypeScript and Go, from backend services and ML pipelines to mobile applications.
 
 ## Experience
 
@@ -17,23 +20,23 @@ AI Product Engineer with 4+ years of experience building production systems and 
 
 **Paris, France | October 2023 to present**
 
-- Built a production ML pipeline for YOLO-based product recognition, automating training workflows and deploying real-time segmentation models.
-- Scaled Louis Vuitton's Java, Kafka and PostgreSQL transaction repository from China to global operations, migrating 170M transactions and increasing ingestion volume 10x.
+- Scaled Louis Vuitton's Java, Kafka and PostgreSQL transaction repository from China to global operations, migrating 170M transactions and increasing ingestion volume 10x. Worked directly with the product manager.
 - Developed NestJS services on Google Cloud Run processing thousands of invoice files per day for Auchan.
-- Automated HR workflows with Python and TypeScript, reducing processing time by 90% for systems serving 200k employees.
+- Built a YOLO-based product recognition pipeline for Pierre Fabre, automating training workflows and deploying real-time segmentation models.
+- Automated business workflows with Python and TypeScript, reducing processing time by 90% for systems serving 200k employees.
 
 ### Humanitics.ai, acquired by YOOBIC | Machine Learning Engineer
 
 **Paris, France | September 2022 to September 2023**
 
-- Built and deployed ChartGPT, an LLM-powered data visualization library with 25k+ downloads that won Plotly's Dash-GPT Challenge.
+- Built and deployed ChartGPT, an LLM-powered data visualization library with 33.8k downloads that won Plotly's Dash-GPT Challenge.
 - Designed ML deployment workflows covering evaluation, versioning and production serving.
 
-### Humanitics.ai | Data Scientist
+### Humanitics.ai | Data Science Intern
 
 **Paris, France | February 2022 to July 2022**
 
-- Built a time-series forecasting model for Lacoste retail traffic, reducing prediction MAPE by 25% to support staffing decisions.
+- Built a time-series forecasting model for Lacoste retail traffic, improving prediction MAPE by 25% to support staffing decisions.
 - Improved a Dash application's performance and deployed a shared JupyterLab research environment.
 
 ### Learning Planet Institute | Data Science Research Intern
@@ -44,17 +47,57 @@ AI Product Engineer with 4+ years of experience building production systems and 
 
 ## Selected Products
 
-### Kynto | Lead Developer
+### Dripin
 
-Website: [kyntoai.com](https://kyntoai.com)
+A solo-built iOS wardrobe app on the App Store. Built with TypeScript, React Native, Go, PostgreSQL and Gemini, with memory, tool use and analytics. Runs on self-hosted infrastructure with MinIO.
 
-Designed and built the complete AI layer using FastAPI, Cloud Run, Vertex AI, LangChain and RAG over candidate and job data.
+To make clothes easier to organise and work with.
 
-### Dripin | AI wardrobe app
+Stack: TypeScript, React Native, Go, PostgreSQL, Gemini
 
-Website: [dripin.app](https://dripin.app)
+- [Website](https://dripin.app)
+- [App Store](https://apps.apple.com/fr/app/dripin-dressing-styliste-ia/id6788119955)
 
-Built end-to-end with Go, React Native, PostgreSQL, MinIO and Gemini on self-hosted infrastructure.
+### Paris GO
+
+An open-source iOS app for finding viewpoints photographed across Paris in 1970, recreating them today and comparing the city across time.
+
+To put a changing Paris side by side with its past.
+
+Stack: React Native, Expo, TypeScript, Maps, Open Data
+
+- [Source code](https://github.com/Youplala/reprise)
+
+### HomeARt
+
+A native iOS app for previewing art at true scale on your own walls, customizing frames and composing gallery walls in augmented reality.
+
+To preview art on your wall before hanging it.
+
+Stack: SwiftUI, RealityKit, ARKit, LiDAR, iOS
+
+
+
+### Kynto
+
+Lead Developer in an unpaid, part-time venture, January to August 2026. Built an AI layer with FastAPI, RAG, Vertex AI, LangChain, tool use, SSE, testing and observability.
+
+To connect candidate and job information inside recruitment workflows.
+
+Stack: FastAPI, LangChain, Vertex AI, RAG, Cloud Run
+
+- [Website](https://kyntoai.com)
+
+### ChartGPT
+
+1st place in Plotly's Dash-GPT Challenge. Turns natural-language questions into interactive charts, with 33.8k downloads.
+
+To turn a question about data into an interactive chart.
+
+Stack: Python, Dash, Plotly, LLMs, HuggingFace
+
+- [Website](https://chartgpt.brosset.li/)
+- [Source code](https://github.com/Youplala/chartgpt)
 
 ## Skills
 
@@ -65,5 +108,5 @@ Built end-to-end with Go, React Native, PostgreSQL, MinIO and Gemini on self-hos
 
 ## Education
 
-- **MSc Computer Science, Artificial Intelligence** | CY Tech | 2022 to 2023
-- **BSc Data Science and Modeling** | CY Cergy Paris University | 2018 to 2022
+- MSc Computer Science, Artificial Intelligence | CY Tech | 2022 to 2023
+- BSc Data Science and Modeling | CY Cergy Paris University | 2018 to 2022

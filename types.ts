@@ -4,6 +4,7 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
+  why: string;
   imageUrl: string;
   year: string;
   githubUrl?: string;
@@ -15,5 +16,5 @@ export interface Experience {
   company: string;
   role: string;
   period: string;
-  description: string;
+  bullets: string[];
 }
