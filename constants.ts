@@ -5,7 +5,7 @@ export const SOCIAL_LINKS = {
   github: 'https://github.com/youplala',
   linkedin: 'https://linkedin.com/in/eliebrosset',
   x: 'https://x.com/eliebrosset',
-  resume: '/Elie_Brosset_AI_Product_Engineer.docx'
+  resume: 'https://rxresu.me/eliebrosset/ai-product-engineer-portfolio'
 };
 
 export const PROJECTS: Project[] = [
